@@ -49,6 +49,19 @@ const demoScreens = {
       "Diseñado para tocar y resolver rápido.",
     ],
   },
+  signs: {
+    src: "/assets/IMG_2147.PNG",
+    alt: "Avatar clínico del módulo de señas",
+    status: "Módulo señas",
+    title: "Avatar clínico para apoyar comunicación guiada",
+    description:
+      "Esta vista explica mejor una parte clave del producto: un avatar visual que ayuda a comunicar frases clínicas de forma más clara y acompañada.",
+    points: [
+      "Avatar visible como apoyo visual directo.",
+      "Frases clínicas rápidas en la misma pantalla.",
+      "Extiende la accesibilidad más allá de texto y audio.",
+    ],
+  },
   sos: {
     src: "/assets/IMG_2149.PNG",
     alt: "Pantalla SOS de Incluya",
