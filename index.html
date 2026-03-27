@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Incluya Demo | Accesibilidad y comunicación asistida</title>
+    <meta
+      name="description"
+      content="Demo web de Incluya para explorar módulos de accesibilidad, comunicación asistida y apoyo inmediato."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@500;700;800&family=Figtree:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" href="/assets/incluya-logo-dark.png" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="site-shell nav-row">
+        <a href="#top" class="brand" aria-label="Inicio de demo Incluya">
+          <img src="/assets/incluya-logo-dark.png" alt="Incluya" class="brand-mark" />
+          <div>
+            <strong>Incluya</strong>
+            <span>Demo web</span>
+          </div>
+        </a>
+        <nav class="nav-links" aria-label="Principal">
+          <a href="#demo">Probar demo</a>
+          <a href="#modulos">Módulos</a>
+          <a href="#capturas">Capturas</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="site-shell hero-grid">
+          <div class="hero-copy">
+            <span class="eyebrow">Incluya / demo interactiva</span>
+            <h1>Una vista web para entender cómo se siente Incluya</h1>
+            <p class="hero-lead">
+              Esta experiencia <strong>es una demo</strong>, no la app final. Sirve para
+              probar el concepto: ver, oír, conversar, pedir ayuda y revisar ajustes de
+              accesibilidad desde una sola interfaz.
+            </p>
+            <div class="hero-actions">
+              <a href="#demo" class="btn btn-primary">Probar demo</a>
+              <a href="#capturas" class="btn btn-secondary">Ver capturas reales</a>
+            </div>
+            <ul class="hero-notes">
+              <li>Marcada claramente como demo para no confundirla con producción.</li>
+              <li>Construida con pantallas reales de la app.</li>
+              <li>Pensada para que alguien entienda la propuesta en menos de un minuto.</li>
+            </ul>
+          </div>
+
+          <aside class="hero-panel">
+            <span class="demo-badge">Demo conceptual</span>
+            <h2>Qué se puede probar aquí</h2>
+            <p>
+              Navega entre módulos, cambia de pantalla y abre las capturas completas para
+              revisar la experiencia con más detalle.
+            </p>
+            <div class="mini-list">
+              <span>Inicio</span>
+              <span>Modo oír</span>
+              <span>Conversar</span>
+              <span>SOS</span>
+              <span>Ajustes</span>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="demo-section" id="demo">
+        <div class="site-shell demo-grid">
+          <div class="demo-copy">
+            <span class="section-kicker">Probar</span>
+            <h2>Explora una versión navegable del flujo principal</h2>
+            <p>
+              Cada botón cambia la pantalla del teléfono para mostrar una parte distinta de
+              la experiencia. Las imágenes se pueden ampliar.
+            </p>
+
+            <div class="module-tabs" role="tablist" aria-label="Módulos demo">
+              <button class="module-tab is-active" type="button" data-demo-target="home" role="tab" aria-selected="true">Inicio</button>
+              <button class="module-tab" type="button" data-demo-target="hearing" role="tab" aria-selected="false">Oír</button>
+              <button class="module-tab" type="button" data-demo-target="conversation" role="tab" aria-selected="false">Conversar</button>
+              <button class="module-tab" type="button" data-demo-target="sos" role="tab" aria-selected="false">SOS</button>
+              <button class="module-tab" type="button" data-demo-target="settings" role="tab" aria-selected="false">Ajustes</button>
+            </div>
+
+            <article class="demo-detail">
+              <span class="demo-status" id="demo-status">Pantalla principal</span>
+              <h3 id="demo-title">Accesos rápidos para ver, oír y pedir ayuda</h3>
+              <p id="demo-description">
+                La pantalla inicial resume los módulos disponibles y deja visibles las rutas
+                críticas para accesibilidad y apoyo inmediato.
+              </p>
+              <ul class="detail-points" id="demo-points">
+                <li>Entrada clara a los módulos principales.</li>
+                <li>SOS visible desde la primera pantalla.</li>
+                <li>Lectura rápida del estado general de la experiencia.</li>
+              </ul>
+            </article>
+          </div>
+
+          <div class="phone-stage">
+            <div class="phone-frame">
+              <button
+                type="button"
+                class="phone-screen-button"
+                id="demo-image-trigger"
+                aria-label="Abrir imagen completa de la demo"
+              >
+                <img
+                  src="/assets/IMG_2141.PNG"
+                  alt="Pantalla principal de Incluya"
+                  id="demo-image"
+                  class="phone-screen"
+                />
+              </button>
+            </div>
+            <p class="phone-hint">Click en la pantalla para verla completa.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="modules-section" id="modulos">
+        <div class="site-shell">
+          <div class="section-heading">
+            <span class="section-kicker">Módulos</span>
+            <h2>La demo muestra la lógica principal de Incluya</h2>
+            <p>No intenta reemplazar la app nativa. Muestra el tipo de experiencia que el producto propone.</p>
+          </div>
+
+          <div class="module-grid">
+            <article class="module-card">
+              <strong>Inicio</strong>
+              <p>Resume accesos principales, estado y rutas de emergencia.</p>
+            </article>
+            <article class="module-card">
+              <strong>Modo oír</strong>
+              <p>Simula subtítulos grandes y lectura más clara de conversaciones.</p>
+            </article>
+            <article class="module-card">
+              <strong>Conversar</strong>
+              <p>Muestra frases rápidas para comunicación asistida en contextos sensibles.</p>
+            </article>
+            <article class="module-card">
+              <strong>SOS</strong>
+              <p>Presenta ayuda rápida, ubicación y acciones críticas en una sola pantalla.</p>
+            </article>
+            <article class="module-card">
+              <strong>Ajustes</strong>
+              <p>Refuerza que accesibilidad no es un extra, sino parte central del producto.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="gallery-section" id="capturas">
+        <div class="site-shell">
+          <div class="section-heading">
+            <span class="section-kicker">Capturas</span>
+            <h2>Pantallas reales para entender mejor la propuesta</h2>
+          </div>
+
+          <div class="gallery-grid">
+            <button type="button" class="gallery-item" data-lightbox-src="/assets/IMG_2141.PNG" data-lightbox-alt="Pantalla principal de Incluya">
+              <img src="/assets/IMG_2141.PNG" alt="Pantalla principal de Incluya" />
+            </button>
+            <button type="button" class="gallery-item" data-lightbox-src="/assets/IMG_2144.PNG" data-lightbox-alt="Modo oír con subtítulos grandes">
+              <img src="/assets/IMG_2144.PNG" alt="Modo oír con subtítulos grandes" />
+            </button>
+            <button type="button" class="gallery-item" data-lightbox-src="/assets/IMG_2148.PNG" data-lightbox-alt="Modo conversar con frases rápidas">
+              <img src="/assets/IMG_2148.PNG" alt="Modo conversar con frases rápidas" />
+            </button>
+            <button type="button" class="gallery-item" data-lightbox-src="/assets/IMG_2149.PNG" data-lightbox-alt="Pantalla SOS de Incluya">
+              <img src="/assets/IMG_2149.PNG" alt="Pantalla SOS de Incluya" />
+            </button>
+            <button type="button" class="gallery-item" data-lightbox-src="/assets/IMG_2150.PNG" data-lightbox-alt="Ajustes de accesibilidad de Incluya">
+              <img src="/assets/IMG_2150.PNG" alt="Ajustes de accesibilidad de Incluya" />
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-shell footer-row">
+        <p>Incluya Demo es una experiencia web explicativa. No representa la app final ni un entorno productivo.</p>
+        <a href="https://github.com/faviomosquera22/incluya_demo" target="_blank" rel="noreferrer">Ver repositorio</a>
+      </div>
+    </footer>
+
+    <script src="/script.js"></script>
+  </body>
+</html>
